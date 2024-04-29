@@ -1,24 +1,7 @@
-# testtask
+#### Изменения:
 
-## Project setup
-```
-yarn install
-```
+###### Были внесены следующие изменения:
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+**Переработана структура проекта**: Осуществлено незначительное изменение структуры проекта. Компонент ItemComponent был разделен на два новых компонента: ItemsList и ItemAdd, для лучшей организации кода и управления компонентами.
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+**Работа над типизацией проекта**: Внедрены улучшения в типизацию проекта для повышения надежности и понимания кода.
