@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <item-category :items="data" class="sidebar" @click="selectItem" />
-    <item-content v-if="selectedItem" :item="selectedItem" @click="onClick" />
+    <item-content v-if="selectedItem" :item="selectedItem" />
   </div>
 </template>
 
@@ -19,40 +19,6 @@ const selectedItem: Ref<Product | null> = ref(null);
 
 const selectItem = (item: Product) => {
   selectedItem.value = item;
-};
-
-const onClick = (value: string) => {
-  if (selectedItem.value) {
-    switch (value) {
-      case 'color': {
-        selectedItem.value.attributes.push({
-          code: 'new code',
-          name: 'new field',
-          color: 'color',
-        });
-        break;
-      }
-      case 'size': {
-        selectedItem.value.attributes.push({
-          code: 'new code',
-          name: 'new field',
-          size: {
-            width: 0,
-            height: 0,
-          },
-        });
-        break;
-      }
-      case 'weight': {
-        selectedItem.value.attributes.push({
-          code: 'new code',
-          name: 'new field',
-          weight: 0,
-        });
-        break;
-      }
-    }
-  }
 };
 </script>
 
